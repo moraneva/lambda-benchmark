@@ -1,1 +1,0 @@
-C:\Code\LambdaBenchmark\dotnet\AwsDynamoDBDataModelSample1\AwsDynamoDBDataModelSample1\bin\Debug\AwsDynamoDBDataModelSample1.exe.config
