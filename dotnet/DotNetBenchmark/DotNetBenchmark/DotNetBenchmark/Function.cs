@@ -29,9 +29,14 @@ namespace DotNetBenchmark
         /// </summary>
         /// <param name="request"></param>
         /// <returns>The list of blogs</returns>
-        public string Get(APIGatewayProxyRequest request, ILambdaContext context)
+        public APIGatewayProxyResponse Get(APIGatewayProxyRequest request, ILambdaContext context)
         {
-            return "Hello";
+            return  new APIGatewayProxyResponse
+            {
+                StatusCode = (int)HttpStatusCode.OK,
+                Body = "Hello",
+                Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
+            };
         }
     }
 }
