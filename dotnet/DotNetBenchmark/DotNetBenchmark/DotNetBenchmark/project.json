@@ -5,10 +5,6 @@
   },
 
   "dependencies": {
-    "Microsoft.NETCore.App": {
-      "type": "platform",
-      "version": "1.0.0"
-    },
     "Amazon.Lambda.Core": "1.0.0",
     "Amazon.Lambda.APIGatewayEvents": "1.0.1",
     "Amazon.Lambda.Serialization.Json": "1.0.1",
@@ -16,7 +12,8 @@
       "type": "build",
       "version": "1.1.0-preview1"
     },
-    "AWSSDK.DynamoDBv2": "3.3.2.1"
+    "AWSSDK.DynamoDBv2": "3.3.2.1",
+    "Microsoft.NETCore.App": "1.1.0"
   },
 
   "tools": {

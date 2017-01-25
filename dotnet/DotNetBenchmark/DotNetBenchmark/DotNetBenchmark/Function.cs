@@ -29,26 +29,9 @@ namespace DotNetBenchmark
         /// </summary>
         /// <param name="request"></param>
         /// <returns>The list of blogs</returns>
-        public async Task<APIGatewayProxyResponse> Get(APIGatewayProxyRequest request, ILambdaContext context)
+        public string Get(APIGatewayProxyRequest request, ILambdaContext context)
         {
-
-            AmazonDynamoDBClient dbClient = new AmazonDynamoDBClient(RegionEndpoint.USEast2);
-            var dynamoRequest = new ScanRequest
-            {
-                TableName = "Test"
-            };
-            var responseDynamo = await dbClient.ScanAsync(dynamoRequest);
-
-            context.Logger.LogLine("Get Request\n");
-
-            var response = new APIGatewayProxyResponse
-            {
-                StatusCode = (int)HttpStatusCode.OK,
-                Body = responseDynamo.Count + "",
-                Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } }
-            };
-
-            return response;
+            return "Hello";
         }
     }
 }
