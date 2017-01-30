@@ -12,7 +12,7 @@ var routes = {
     }
 };
 
-apiBenchmark.compare(services, routes, { minSamples: 100 }, (err, results) => {
+apiBenchmark.measure(services, routes, { minSamples: 100 }, (err, results) => {
 
     apiBenchmark.getHtml(results, (error, html) => {
 
@@ -34,7 +34,7 @@ routes = {
 	}
 }
 
-apiBenchmark.compare(services, routes, { minSamples: 100 }, (err, results) => {
+apiBenchmark.measure(services, routes, { minSamples: 100 }, (err, results) => {
 
     apiBenchmark.getHtml(results, (error, html) => {
 
